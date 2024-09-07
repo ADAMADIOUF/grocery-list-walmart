@@ -1,13 +1,180 @@
+/* General Styles */
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Todo List */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-item button {
+  margin-left: auto;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.todo-item button:hover {
+  background-color: #c0392b;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Add Todo Form */
+.add-todo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.add-todo input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-todo button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-todo button:hover {
+  background-color: #27ae60;
+}
+
+/* Filter Buttons */
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #2980b9;
+}
+
+.filters button.active {
+  background-color: #2980b9;
+  font-weight: bold;
+}
+
+/* Clear All Button */
+.clear-all {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+.clear-all:hover {
+  background-color: #c0392b;
+}
+/* Styles for unordered lists */
+ul {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+/* Styles for list items */
+li {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically center items */
+  background-color: #fff; /* White background for items */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  margin-bottom: 10px; /* Space between items */
+  padding: 10px; /* Space inside the item */
+  font-size: 1rem; /* Font size for readability */
+}
+
+/* Styling for completed list items */
+li.completed {
+  text-decoration: line-through; /* Strike-through text for completed items */
+  color: #aaa; /* Grey color for completed items */
+}
+
+/* Additional styling for checkboxes */
+li input[type="checkbox"] {
+  margin-right: 10px; /* Space between checkbox and text */
+}
+
+/* Button styling inside list items */
+li button {
+  background-color: #e74c3c; /* Red background for delete button */
+  color: #fff; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 5px 10px; /* Space inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-left: auto; /* Push button to the right */
+}
+
+/* Hover effect for buttons */
+li button:hover {
+  background-color: #c0392b; /* Darker red on hover */
 }
